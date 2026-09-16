@@ -1,0 +1,114 @@
+.section {
+    max-width: 600px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* вкладки — не скроллятся */
+.tabs {
+    display: flex;
+    flex-shrink: 0;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #2f2f37;
+}
+
+.tab {
+    flex: 1;
+    padding: 16px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #8585ad;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.tab:hover {
+    color: #f2f2f3;
+}
+
+.tabActive {
+    color: #f2f2f3;
+    border-bottom: 2px solid #4c4cff;
+}
+
+/* вот тут скролл — только карточки */
+.scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: #2f2f37;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #8585ad;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #4c4cff;
+}
+
+.scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #8585ad #2f2f37;
+}
+
+/* остальное как было */
+
+.group {
+    margin-bottom: 40px;
+}
+
+.group h2 {
+    margin-bottom: 24px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 12px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 240px;
+    height: 120px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
